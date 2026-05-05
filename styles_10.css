@@ -1,0 +1,198 @@
+body {
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    background-color: #f4f1f7;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/* Навбар */
+.navbar {
+    background-color: #4a4e69;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #c9ada7 !important;
+}
+
+/* Разделы */
+.section {
+    padding: 70px 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.section h2 {
+    color: #4a4e69;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Поднавигация */
+.subnav {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.subnav a {
+    color: #4a4e69;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 0 10px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.subnav a:hover {
+    border-color: #c9ada7;
+    color: #c9ada7;
+}
+
+/* Слайдер */
+.slider-container {
+    position: relative;
+    max-width: 850px;
+    margin: 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide-img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Кнопки слайдера */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(74, 78, 105, 0.8);
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.slider-btn:hover {
+    background-color: rgba(201, 173, 167, 0.9);
+}
+
+.slider-btn.prev {
+    left: 15px;
+}
+
+.slider-btn.next {
+    right: 15px;
+}
+
+/* Модальные окна */
+.modal-content {
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+/* Контентные блоки */
+.content-block {
+    margin-bottom: 50px;
+}
+
+/* Форма */
+input,
+textarea {
+    background-color: #fdfdfd;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #c9ada7;
+    outline: none;
+}
+
+button, .btn {
+    background-color: #4a4e69;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #c9ada7;
+    color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .section {
+        padding: 50px 20px;
+    }
+
+    .slider-container {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .section {
+        padding: 40px 20px;
+    }
+
+    .slider-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .subnav a {
+        display: block;
+        margin: 8px 0;
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 1</title>
+</head>
+<body>
+<script src="script.js"></script>
+<p>Цель работы – приобретение навыков создания для HTML-документа внешних и внутренних скриптов на JavaScript, формирование практических навыков использования операторов и создания функций.</p>
+<script>
+    alert("Да, у меня появились навыки создания веб-страниц с использованием HTML и CSS.");
+</script>
+
+<script>  
+
+let hour = 14; // текущее время в часах
+let timeOfDay;
+
+if (hour >= 5 && hour < 12) {
+    timeOfDay = "Утро";
+} else if (hour >= 12 && hour < 18) {
+    timeOfDay = "День";
+} else if (hour >= 18 && hour < 22) {
+    timeOfDay = "Вечер";
+} else {
+    timeOfDay = "Ночь";
+}
+console.log("Время суток: " + timeOfDay);
+
+    let strNumber = "42"; 
+    let num = +strNumber; 
+    console.log("Числовое значение: " + num); 
+
+</script>  
+
+</body>
+</html>

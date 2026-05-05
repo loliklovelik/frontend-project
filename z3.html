@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница 1</title>
+</head>
+<body>
+<p>Цель работы – приобретение навыков создания для HTML-документа внешних и внутренних скриптов на JavaScript, формирование практических навыков использования операторов и создания функций.</p>
+<script>
+    alert("Да, у меня появились навыки создания веб-страниц с использованием HTML и CSS.");
+</script>
+
+ 
+<script>
+const parkDistance = 3; // длина парка в км
+const runningSpeed = 8; // скорость бега в км/ч
+
+// Function Declaration
+function calculateRunningTime(distance, speed) {
+    let time = distance / speed; 
+    let timeInMinutes = time * 60; 
+    console.log(`Время, необходимое для пробежки по парку (${distance} км) при скорости ${speed} км/ч: ${timeInMinutes.toFixed(2)} минут.`);
+}
+
+// Function Expression
+const calculateRunningTimeExpression = function(distance, speed) {
+    let time = distance / speed;
+    let timeInMinutes = time * 60;
+    console.log(`Время, необходимое для пробежки по парку (${distance} км) при скорости ${speed} км/ч: ${timeInMinutes.toFixed(2)} минут.`);
+};
+
+// Arrow Function
+const calculateRunningTimeArrow = (distance, speed) => {
+    let time = distance / speed;
+    let timeInMinutes = time * 60;
+    console.log(`Время, необходимое для пробежки по парку (${distance} км) при скорости ${speed} км/ч: ${timeInMinutes.toFixed(2)} минут.`);
+};
+
+calculateRunningTime(parkDistance, runningSpeed);
+calculateRunningTimeExpression(parkDistance, runningSpeed);
+calculateRunningTimeArrow(parkDistance, runningSpeed);
+
+</script>
+
+
+
+</body>
+</html>

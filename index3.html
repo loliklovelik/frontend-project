@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Авиабилеты</title>
+  <style>
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;     
+      width: 85%;  
+    }
+
+    .form-group label {
+      flex-basis: 18%;
+      text-align: right;
+      margin-right: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      flex-grow: 1;
+      padding: 10px 14px;
+      border: 2px solid #a8b6db;
+      border-radius: 12px;
+      
+    }
+
+    .form-group input[type="radio"],
+    .form-group input[type="checkbox"] {
+      flex-grow: 0;
+      margin-right: 4px;
+    }
+
+    .form-actions {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .form-actions button {
+      padding: 14px 60px;
+      background-color: #a3cae4;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      border-radius: 12px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body style="background-color: #c9def1">
+  <h1 style="text-align: center;"> Бронирование билетов на самолет</h1>
+  <form>
+    <div class="form-group">
+      <label for="name">Ваше ФИО:</label>
+      <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Ваш email:</label>
+      <input type="email" id="email" name="email" placeholder="Ivanov@guap.ru" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Пароль:</label>
+      <input type="password" id="password" name="password" placeholder="admin" required>
+    </div>
+    <div class="form-group">
+      <label>Класс вагона:</label>
+      <div>
+        <input type="radio" id="class-economy" name="class" value="economy" checked>
+        <label for="class-economy">Эконом</label>
+      </div>
+      <div>
+        <input type="radio" id="class-komfort" name="class" value="komfort">
+        <label for="class-komfort">Комфорт</label>
+      </div>
+      <div>
+        <input type="radio" id="class-business" name="class" value="business">
+        <label for="class-business">Бизнес</label>
+      </div>
+      <div>
+        <input type="radio" id="class-one" name="class" value="one">
+        <label for="class-one">Первый класс</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Доп. услуги:</label>
+      <div>
+        <input type="checkbox" id="meal" name="services[]" value="meal">
+        <label for="meal">Питание</label>
+      </div>
+      <div>
+        <input type="checkbox" id="bagach" name="services[]" value="bagach">
+        <label for="bagach">Негабаритный багаж</label>
+      </div>
+      <div>
+        <input type="checkbox" id="windows" name="services[]" value="windows">
+        <label for="windows">Место у окна</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="departure">Город отправления:</label>
+      <select id="departure" name="departure">
+        <option value="moscow">Москва</option>
+        <option value="saint-petersburg">Санкт-Петербург</option>
+        <option value="cochi">Сочи</option>
+        <option value="tyapse">Туапсе</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="arrival">Город прибытия:</label>
+      <select id="arrival" name="arrival">
+        <option value="moscow">Москва</option>
+        <option value="saint-petersburg">Санкт-Петербург</option>
+        <option value="cochi">Сочи</option>
+        <option value="tyapse">Туапсе</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="departure-date">Дата отправления:</label>
+      <input type="date" id="departure-date" name="departure-date" required>
+    </div>
+
+    <div class="form-group">
+      <label for="comments">Комментарии:</label>
+      <textarea id="comments" name="comments" rows="3" placeholder="Введите ваши комментарии"></textarea>
+    </div>
+    <div class="form-actions">
+      <button type="submit">Заказать билеты</button>
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вкладка</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #b0d7f9;
+    }
+    
+    .container {
+      padding: 20px;
+      
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .links a {
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #87b6e3;
+      display: block;
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px; 
+    }
+
+    .content-block {
+      padding: 10px;
+      flex: 0 0 25%;
+      box-sizing: border-box;
+    }
+    .content-block:nth-child(2) {
+      flex: 0 0 50%; 
+    }
+
+    .content-block p {
+      margin-bottom: 10px;
+    }
+
+    .content-block img {
+      max-width: 200px; 
+      height: auto; 
+      float: left; 
+      margin-right: 15px; 
+      margin-bottom: 3px;
+    }
+    
+    .navbar-light{
+      background-color: #87b6e3;
+    } 
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      background-color: #87b6e3;
+      color: #000000;
+    }
+
+    .footer-block {
+      text-align: center;
+      margin: 20px 35px 5px 35px;
+    }
+
+
+
+    @media (max-width: 800px) {
+      .links {
+        display: none;
+      }
+
+      .content {
+        display: block;
+      }
+
+      .content-block {
+        width: 100%;
+      }
+      
+      .content-block img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        float: none; 
+        display: block;
+      }
+    }
+
+ 
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" >Мурзик</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Пушок</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Снежок</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Барсик</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="content-block">
+        <p>  Котик по имени Мурзик жил в уютном доме. Однажды он нашёл загадочную коробку. Заглянув внутрь, Мурзик обнаружил там пушистый клубок ниток и весело начал играть с ним.             </p>
+      </div>
+      <div class="content-block">
+        <img src="./2024-11-06_23-14-09.png" alt="kotic" class="img-fluid">
+        <p>Жизнь котиков полна забавных приключений и неожиданных трудностей. Эти пушистые создания с глазами, полными загадок, иногда сталкиваются с непростыми задачами: найти идеальное место для сна или поймать ускользающую мышку. 
+          Они смело исследуют мир, но могут испугаться громкого звука или неожиданного визита. Несмотря на все сложности, котики находят радость в солнечных пятнах и мягких подушках, превращая каждую минуту в маленькое счастье. Их жизнь — это бесконечное очарование и милота!
+        </p>
+      </div>
+      <div class="content-block">
+       <p> Котик по имени Мурзик однажды нашёл потерянный шарик. Он играл с ним целый день, радуя всех своим весёлым настроением.</p>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="./1234.webp" class="img-fluid rounded-start" alt="kotici">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Приключения котиков</h5>
+            <p class="card-text">Котики всегда находят способы развлечь себя и своих хозяев. Их игривость и любопытство делают их незаменимыми спутниками.</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Узнать больше
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Приключения котиков</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            Котики могут быть настоящими исследователями. Они любят лазить по шкафам, прятаться в коробках и, конечно же, играть с клубками ниток!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="footer mt-3">
+      <div class="footer-block">
+        <p>Телефон: +7 (800) 555 - 35 - 35</p>
+      </div>
+      <div class="footer-block">
+        <p>Адрес: Спб, ул. Большая морская, д. 67</p>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </div>
+</body>
+</html>
+
