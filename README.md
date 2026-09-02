@@ -1,4 +1,4 @@
-# 🌐 Frontend Development
+# Frontend Development
 
 > Учебный проект по курсу повышения квалификации  
 > **Тема**: Разработка веб-интерфейсов с использованием HTML, CSS и JavaScript
